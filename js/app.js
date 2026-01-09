@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
   btnGreet.addEventListener('click', function() {
     const name = txtName.value.trim();
     if (name) {
-      const greeting = `Hello, ${name}! Welcome to JavaScript practice.`;
+      const greeting = `Hello, ${name}! Welcome.`;
       output.value = greeting;
     } else {
-      output.value = 'Please enter your name first.';
+      output.value = 'Please enter your name .';
     }
   });
 
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
       removeBtn.addEventListener('click', function() {
         items.splice(index, 1);
         renderList();
-        updateOutput(`Item "${item}" removed from list.`);
+        updateOutput(`Item - "${item}" removed from list.`);
       });
       
       li.appendChild(removeBtn);
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (itemText) {
       items.push(itemText);
       renderList();
-      updateOutput(`Item "${itemText}" added to list.`);
+      updateOutput(`Item - "${itemText}" added to list.`);
       txtItem.value = '';
       txtItem.focus();
     } else {
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (items.length > 0) {
       const removedItem = items.pop();
       renderList();
-      updateOutput(`Last Item "${removedItem}" removed from list.`);
+      updateOutput(`Last Item - "${removedItem}" removed from list.`);
     } else {
       updateOutput('No items to remove.');
     }
